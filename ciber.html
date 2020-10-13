@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio java</title>
+</head>
+<body>
+    <script>
+        /*Exercici 1
+L'exercici consisteix a crear un fitxer anomenat ciber.html i mostrar per consola un 'Hola mundo' (per activar la consola ->; F12). Pista: Console.log()
+    */
+        console.log("Hola Mundo");
+
+        /*Exercici 2
+Crea un alert que mostri el teu nom:
+    */
+        alert("Mirko")
+
+        /*Exercici 3
+Crea una variable que contingui el teu nom i un altre que contingui el teu cognom.
+    */
+        var nombre="Mirko";
+        var apellido="Zedde";
+        console.log(nombre +" "+ apellido)
+
+        /*Exercici 4
+Crea dos variables amb dos números i fes una suma entre ells.
+        */
+        var primerNumero=15;
+        var segundoNumero=12;
+        totalSuma=primerNumero+segundoNumero;
+        console.log("La suma entre " + primerNumero + " y " + segundoNumero + " es " + totalSuma)
+        /*Exercici 5
+Crea una variable nota_examen juntament amb un alert que ens digui si l’examen ha estat aprovat o no juntament amb la nota. (caldrà utilitzar un condicional IF)
+        */
+        var nota_examen = prompt("nota del examen (de 0 a 10)"); 
+        if (nota_examen >= 5) {
+        alert("Has aprobado!");
+        } else {
+        alert("Has suspendido!");
+        }
+        /*Exercici 6
+Reemplaça la paraula blau per la paraula verd del següent text Tinc un cotxe de color blau. Després intenta fer-ho remplaçant les o per les u.
+        */
+        var fraseOriginal = "Tengo un coche de color azul";
+        var fraseCambiada = fraseOriginal.replace("azul", "verde");
+        console.log("La frase inicial era '" + fraseOriginal + "' y ahora es '" + fraseCambiada + "'.")
+        var fraseCambiada = fraseCambiada.replace(/o/g, "u");
+        console.log("Cambio de vocales en la frase anterior: " + fraseCambiada + ".");
+
+        /*Exercici 7
+Donat el seguit llistat d'objectes 'taula', 'cadira', 'ordinador', 'libreta', per un bucle que mostri per pantalla cada objecte i la save posició al llistat.
+        */   
+        var arrayObjects = ["Mesa", "Silla", "Ordenador", "Libreta"];
+        for (var i = 0; i < arrayObjects.length; i++) {
+        console.log("El objeto '" + arrayObjects[i] + "' está en la posicion " + [i] + ".");  
+        }
+        
+        /*Exercici 8
+Crea una funció anomenada calculadora que tingui com a entrada els següents paràmetres: operador, valor1 i valor2.
+Estructura de la funció que faci sumes, restes i multiplicacions. El resultat haurà de ser mostrar per pantalla.
+        */
+        var num1=prompt("introduce el primer nº");
+var num2=prompt("introduce el segundo nº");
+
+if(!isNaN(num1) && !isNaN(num2)){  
+
+var operacion=prompt("Que tipo de operacion quieres seleccionar: suma/resta/multiplicación/división?");
+
+
+if(operacion=="suma"){
+    alert(parseInt(num1)+parseInt(num2));
+
+}
+
+else if(operacion=="resta"){
+    alert(parseInt(num1)-parseInt(num2));
+}
+else if(operacion=="multiplicación" || operacion=="multiplicacion"){
+    alert(parseInt(num1)*parseInt(num2));
+}
+else if(operacion=="división" || operacion=="division"){
+    alert(parseInt(num1)/parseInt(num2));
+}
+
+else{
+    alert("Operacion no contemplada!!")
+}
+}
+
+else{
+    if(typeof(num1)=="string" || typeof(num2)=="string"){
+
+    alert("Solo se contemplan numeros!!")
+    }
+}
+
+
+
+
+    </script>
+    
+</body>
+</html>
